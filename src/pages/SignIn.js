@@ -4,12 +4,12 @@ import {FormView} from "../modules/FormComponents";
 import '../styles/Form.css'
 
 
-function validateLoginInput(login, password) { //TODO
+function validateLoginInput(username, password) { //TODO
     return constants.OPERATION_SUCCESSFUL
 }
 
 const SignInForm = () => {
-    const [login, setLogin] = useState("")
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
     return (
@@ -18,11 +18,11 @@ const SignInForm = () => {
             otherFormName={"SIGN UP"}
             formName={"SIGN IN"}
             inputs = {[
-                ['Login', login, setLogin],
+                ['Username', username, setUsername],
                 ['Password', password, setPassword]
             ]}
             buttonName={"Sign in!"}
-            buttonAction={()=>{}}
+            buttonAction={()=>{alert()}}
         />
     )
 }

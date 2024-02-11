@@ -1,0 +1,96 @@
+body {
+    font-family: 'Marker Felt', Fantasy, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 2rem;
+    background-color:#222222;
+}
+
+.mainContainer {
+    padding: 3rem 5rem;
+    border: 0.5rem double #2b542c;
+    border-radius: 60px;
+    background-color: #212121;
+}
+
+.otherForm:visited, .otherForm:link {
+    margin-left: 30px;
+    color: #444444;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.otherForm:hover {
+    color: #2b542c;
+    font-weight: bold;
+    font-size: 2.2rem;
+    transition: 0.5s;
+}
+
+.currentForm {
+    color: #2b542c;
+    font-weight: bold;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer {
+    color: #2b542c;
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.inputField {
+    background-color: transparent;
+    font-size: 20px;
+    border: 0.2rem solid #2b542c;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: #2b542c;
+    text-align: center;
+
+    &:focus {
+        background-color: #2b542c;
+        transition: 0.3s;
+        outline: none;
+        caret-color: transparent;
+        color: #222222;
+    }
+}
+
+.inputLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.formButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.formSubmitButton {
+    font-size: 1.8rem;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0.2rem solid #2b542c;
+    font-weight: bold;
+    color: #2b542c;
+    transition: 0.3s;
+}
+
+.formSubmitButton:hover {
+    background-color: #2b542c;
+    color: #222222;
+    transition: 0.3s;
+    font-size: 2rem;
+}

@@ -1,7 +1,8 @@
 import {useState} from "react";
 import * as constants from "../modules/Constants";
-import {InputContainer} from "../modules/FormComponents";
-import {Link} from "react-router-dom";
+import {FormView, InputContainer} from "../modules/FormComponents";
+import '../styles/Form.css'
+
 
 function validateLoginInput(login, password) { //TODO
     return constants.OPERATION_SUCCESSFUL
@@ -14,41 +15,19 @@ const SignUpForm = () => {
     const [password_repeated, setPasswordRepeated] = useState("")
 
     return (
-        <div className={"mainContainer"}>
-            <div className={"titleContainer"}>
-                <div
-                    className={"notCurrentAction"}>
-                    <Link to="/">SIGN IN</Link>
-                </div>
-                <div className={"currentAction"}>
-                    SIGN UP
-                </div>
-            </div>
-            <br/>
-            <InputContainer
-                input_var={login}
-                input_name="Login"
-                setVar={setLogin}/>
-            <InputContainer
-                input_var={username}
-                input_name="Username"
-                setVar={setUsername}/>
-            <InputContainer
-                input_var={password}
-                input_name="Password"
-                setVar={setPassword}/>
-            <InputContainer
-                input_var={password_repeated}
-                input_name="Repeat password"
-                setVar={setPasswordRepeated}/>
-            <div className={"inputContainer"}>
-                <input
-                    className={"inputButton"}
-                    type="button"
-                    onClick={validateLoginInput(login, password)}
-                    value={"Sign up"}/>
-            </div>
-        </div>
+        <FormView
+            otherFormPath={"/"}
+            otherFormName={"SIGN IN"}
+            formName={"SIGN UP"}
+            inputs = {[
+                ['Login', login, setLogin],
+                ['Username', username, setUsername],
+                ['Password', password, setPassword],
+                ['Repeat password', password_repeated, setPasswordRepeated]
+            ]}
+            buttonName={"Sign up!"}
+            buttonAction={()=>{}}
+        />
     );
 }
 

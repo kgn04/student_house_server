@@ -1,19 +1,27 @@
 import '../styles/Home.css'
 import {MenuItem} from "../modules/HomePageComponents";
+import {useState} from "react";
 
 
 const MenuView = () => {
+    const [clickedItemName, setClickedItemName] = useState('')
     return (
         <div className={"menuContainer"}>
             <MenuItem
                 name = {"Temperature"}
                 value = {"36^C"}
-                onClick = {() => {alert()}}
+                onClick = {setClickedItemName}
+                color = '#761c19'
+                secondColor = '#a94442'
+                clickedItemName={clickedItemName}
             />
             <MenuItem
                 name = {"Humidity"}
                 value = {"40%"}
-                onClick = {() => {alert()}}
+                onClick = {setClickedItemName}
+                color = '#1e347b'
+                secondColor = '#5b80b2'
+                clickedItemName={clickedItemName}
             />
         </div>
     );

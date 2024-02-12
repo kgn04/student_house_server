@@ -35,7 +35,7 @@ body {
     width: 25%;
 }
 
-.TemperatureContainer, .HumidityContainer {
+.menuItemContainer {
     height: 15%;
     border: 0.5rem dotted;
     border-radius: 2rem;
@@ -45,47 +45,30 @@ body {
 
     &:hover {
         transition: 0.3s;
-        background-color: #222222;
     }
 }
 
-.TemperatureLabel, .HumidityLabel {
+.menuItemLabel {
     height: 30%;
+    transition: 0.3s;
+
+    &:hover {
+        transition: 0.3s;
+    }
 }
 
-.TemperatureValue, .HumidityValue {
+.menuItemValue {
     display: flex;
     justify-content: center;
     position: relative;
     top: 20%;
     height: 70%;
     font-size: 3rem;
-}
+    transition: 0.3s;
 
-.TemperatureContainer {
-    background-color: #a94442;
-    border-color: #761c19;
-}
-
-.TemperatureLabel {
-    color: #761c19;
-}
-
-.TemperatureValue {
-    color: #761c19;
-}
-
-.HumidityContainer {
-    background-color: #5b80b2;
-    border-color: #1e347b;
-}
-
-.HumidityLabel {
-    color: #1e347b;
-}
-
-.HumidityValue {
-    color: #1e347b;
+    &:hover {
+        transition: 0.3s;
+    }
 }
 
 .messagesLabel {

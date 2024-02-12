@@ -1,14 +1,14 @@
 export const MenuItem = (props) => {
     return (
         <div
-            className={props.itemName + 'Container'}
+            className={props.name + 'Container'}
             onClick={props.onClick}
         >
-            <div className={props.itemName + 'Label'}>
-                {props.itemName}
+            <div className={props.name + 'Label'}>
+                {props.name}
             </div>
-            <div className={props.itemName + 'Value'}>
-                {props.itemValue}
+            <div className={props.name + 'Value'}>
+                {props.value}
             </div>
         </div>
     );

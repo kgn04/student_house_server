@@ -5,11 +5,16 @@ import {MenuItem} from "../modules/HomePageComponents";
 const MenuView = () => {
     return (
         <div className={"menuContainer"}>
-            {/*<MenuItem*/}
-            {/*    itemName = {"Temperature"}*/}
-            {/*    itemValue = {"36^C"}*/}
-            {/*    onClick = {() => {alert()}}*/}
-            {/*/>*/}
+            <MenuItem
+                name = {"Temperature"}
+                value = {"36^C"}
+                onClick = {() => {alert()}}
+            />
+            <MenuItem
+                name = {"Humidity"}
+                value = {"40%"}
+                onClick = {() => {alert()}}
+            />
         </div>
     );
 }
@@ -25,7 +30,9 @@ const MainView = () => {
 const MessagesView = () => {
     return (
         <div className={"messagesContainer"}>
-
+            <div className={"messagesLabel"}>
+                Messages
+            </div>
         </div>
     );
 }

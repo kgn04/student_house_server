@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import SignInForm from "./pages/SignIn";
 import SignUpForm from "./pages/SignUp";
-import Home from "./pages/Home";
+import HomeView from "./pages/Home";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/home",
-        element: <Home/>,
+        element: <HomeView/>,
     },
 ]);
 

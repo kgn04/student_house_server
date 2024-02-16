@@ -1,5 +1,5 @@
 import '../styles/Home.css'
-import {MenuItem} from "../modules/HomePageComponents";
+import {MenuItem, MessageSender, MessageBox} from "../modules/HomePageComponents";
 import {useState} from "react";
 
 
@@ -41,6 +41,34 @@ const MessagesView = () => {
             <div className={"messagesLabel"}>
                 Messages
             </div>
+            <div className={"messageBoxContainer"}>
+                <MessageBox
+                    author = "Tobiasz"
+                    time = "10:20"
+                    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a iaculis nisi."
+                />
+                <MessageBox
+                    author = "Tobiasz"
+                    time = "10:20"
+                    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a iaculis nisi."
+                />
+                <MessageBox
+                    author = "Tobiasz"
+                    time = "10:20"
+                    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a iaculis nisi."
+                />
+                <MessageBox
+                    author = "Tobiasz"
+                    time = "10:20"
+                    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a iaculis nisi."
+                />
+                <MessageBox
+                    author = "Tobiasz"
+                    time = "10:20"
+                    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a iaculis nisi."
+                />
+            </div>
+            <MessageSender/>
         </div>
     );
 }

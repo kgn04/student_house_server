@@ -35,3 +35,43 @@ export const MenuItem = (props) => {
         </div>
     );
 }
+
+export const MessageBox = (props) => {
+    return (
+        <div className={"messageBox"}>
+            <div className={"messageInfo"}>
+                <div className={"messageAuthor"}>
+                    {props.author}
+                </div>
+                <div className={"messageTime"}>
+                    {props.time}
+                </div>
+            </div>
+            <div className={"messageContent"}>
+                {props.content}
+            </div>
+        </div>
+    );
+}
+
+export const MessageSender = () => {
+    const [message, setMessage] = useState("")
+    return (
+        <div className={"messageSenderContainer"}>
+            <input
+                value={message}
+                onChange={ev => setMessage(ev.target.value)}
+                className={"messageInput"}
+                onKeyDown={(e)=>{
+                    if (e.key === 'Enter')
+                        alert("Message sent!")
+                }}/>
+            <input
+                className={"messageButton"}
+                type="button"
+                onClick={()=>{alert("Message sent!")}}
+                value={"Send"}/>
+        </div>
+    )
+    ;
+}

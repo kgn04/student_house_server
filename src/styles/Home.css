@@ -1,20 +1,21 @@
 body {
     margin: 0;
-    padding: 0;
 }
 
 .homePageContainer {
     display: flex;
-    height: 100vh;
+    flex-direction: row;
+    height: 100%;
     width: 100vw;
 }
 
 .messagesContainer, .middleContainer, .menuContainer {
     padding: 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100%;
 
     &::-webkit-scrollbar {
         display: none;
@@ -24,19 +25,12 @@ body {
 
 .menuContainer {
     width: 20%;
-    display: block;
-    justify-content: center;
-}
-
-.middleContainer {
-    width: 55%;
-    border-right: 0.5rem double #2b542c;
-
+    height: 100%;
 }
 
 .menuItemContainer {
-    height: 15%;
     border: 0.5rem dotted;
+    width: 80%;
     border-radius: 2rem;
     padding: 1rem;
     transition: 0.3s;
@@ -71,8 +65,38 @@ body {
     }
 }
 
+.logoutButton {
+    justify-self: flex-end;
+}
+
+
+.middleContainer {
+    width: 55%;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.intervalButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+#intervalButton {
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+
 .messagesContainer {
-    display: block;
+    border-left: 0.5rem double #222222;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #2b542c;
     width: 25%;
@@ -88,18 +112,14 @@ body {
 
 .messageBoxContainer {
     margin-bottom: 6rem;
+    overflow-y: scroll;
 }
 
 .messageBox {
-    display: block;
     text-align: left;
     padding: 1rem;
     margin: 0.5rem;
     color: #222222;
-}
-
-.messageInfo {
-    display: inline;
 }
 
 .messageAuthor {
@@ -107,9 +127,8 @@ body {
 }
 
 .messageTime {
-    text-align: right;
-    position: relative;
-    right: 0;
+    display: flex;
+    justify-content: flex-end;
     font-size: 1rem;
 }
 
@@ -126,7 +145,10 @@ body {
     margin: 0.5rem;
     background-color: #222222;
     padding: 0.5rem;
-    display: flow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 2rem;
     position: fixed;
     bottom: 0;

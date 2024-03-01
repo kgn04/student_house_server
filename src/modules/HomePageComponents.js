@@ -1,10 +1,13 @@
-import {useState} from "react";
+import React, {useState} from "react";
+import {CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar} from 'recharts';
+
 
 export const MenuItem = (props) => {
     const [color, setColor] = useState(props.color)
     return (
         <div
             className={'menuItemContainer'}
+            id={props.additionalID}
             onClick={() => {
                 props.onClick(props.name);
                 setColor(props.color);
@@ -54,6 +57,20 @@ export const MessageBox = (props) => {
     );
 }
 
+export const PlotContainer = (props) => {
+    return (
+        <div className={"plotContainer"}>
+            <BarChart width={600} height={300} data={props.plotData}>
+                <Bar fill={"#2b542c"} dataKey={props.plotName} stroke="black" />
+                <CartesianGrid stroke="#2b542c" />
+                <XAxis dataKey="Time" stroke="#2b542c" fontSize={20}/>
+                <YAxis stroke="#2b542c" fontSize={20}/>
+                <Tooltip />
+            </BarChart>
+        </div>
+    );
+}
+
 export const MessageSender = () => {
     const [message, setMessage] = useState("")
     return (
@@ -65,12 +82,14 @@ export const MessageSender = () => {
                 onKeyDown={(e)=>{
                     if (e.key === 'Enter')
                         alert("Message sent!")
-                }}/>
+                }}
+            />
             <input
                 className={"messageButton"}
                 type="button"
                 onClick={()=>{alert("Message sent!")}}
-                value={"Send"}/>
+                value={"Send"}
+            />
         </div>
     )
     ;

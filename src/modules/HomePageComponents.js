@@ -61,7 +61,7 @@ export const PlotContainer = (props) => {
     return (
         <div className={"plotContainer"}>
             <BarChart width={600} height={300} data={props.plotData}>
-                <Bar fill={"#2b542c"} dataKey={props.plotName} stroke="black" />
+                <Bar fill={"#2b542c"} dataKey={props.plotName} stroke="black"/>
                 <CartesianGrid stroke="#2b542c" />
                 <XAxis dataKey="Time" stroke="#2b542c" fontSize={20}/>
                 <YAxis stroke="#2b542c" fontSize={20}/>

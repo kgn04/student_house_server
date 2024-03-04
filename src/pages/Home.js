@@ -26,14 +26,16 @@ const MenuView = (props) => {
                 secondColor = '#5b80b2'
                 clickedItemName={props.currentMenuItem}
             />
-            <MenuItem
-                name = {"Log out"}
-                value = {<CgLogOut />}
-                onClick = {props.setCurrentMenuItem}
-                color = '#2b542c'
-                secondColor = '#67b168'
-                clickedItemName={props.currentMenuItem}
-            />
+            <div onClick={() => {}}>
+                <MenuItem
+                    name = {"Log out"}
+                    value = {<CgLogOut />}
+                    onClick = {props.setCurrentMenuItem}
+                    color = '#2b542c'
+                    secondColor = '#67b168'
+                    clickedItemName={props.currentMenuItem}
+                />
+            </div>
         </div>
     );
 }
